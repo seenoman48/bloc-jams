@@ -41,10 +41,11 @@ body.landing {
     transform: scaleX(0.9) translateY(3rem);
     -webkit-transition: all 0.25s ease-in-out;
     -moz-transition: all 0.25s ease-in-out;
-    transition: all 0.25s ease-in-out;
-    -webkit-transition-delay: 0.2s;
+    transition: all 0.5s ease-in-out; /* altered */
+    -webkit-transition-delay: 0.5s; /* altered */
     -moz-transition-delay: 0.2s;
     transition-delay: 0.2s;
+    transform: rotate(180deg); /* added */
 }
 
 .point .point-title {
