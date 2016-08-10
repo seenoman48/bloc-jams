@@ -30,6 +30,22 @@
      ]
  };
 
+ // Third Example Album
+ var albumLuigi = {
+     title: 'Mario Bros',
+     artist: 'Luigi',
+     label: 'Nintendo',
+     year: '1986',
+     albumArtUrl: 'assets/images/album_covers/20.png',
+     songs: [
+         { title: 'Hello, Princess?', duration: '1:01' },
+         { title: 'Jump, Jump, Jump', duration: '5:01' },
+         { title: 'Extra Lives', duration: '3:21'},
+         { title: 'Dont Die Bro?', duration: '3:14' },
+         { title: 'Turtle Shells Hurt', duration: '2:15'}
+     ]
+ };
+
 var createSongRow = function(songNumber, songName, songLength) {
     var template = 
         
@@ -48,7 +64,7 @@ var createSongRow = function(songNumber, songName, songLength) {
      var albumTitle = document.getElementsByClassName('album-view-title')[0];
      var albumArtist = document.getElementsByClassName('album-view-artist')[0];
      var albumReleaseInfo = document.getElementsByClassName('album-view-release-info')[0];
-     var albumImage = document.getElementsByClassName('album-cover-art')[0];
+     var albumImage = document.getElementsByClassName('album-cover-art')[0]; //******** 
      var albumSongList = document.getElementsByClassName('album-view-song-list')[0];
  
      // #2
@@ -66,6 +82,11 @@ var createSongRow = function(songNumber, songName, songLength) {
      }
  };
  
- window.onload = function() {
-     setCurrentAlbum(albumPicasso);
- };
+window.onload = function() {
+    setCurrentAlbum(albumPicasso);
+};
+
+albumImage.addEventListener('click', changeInfo(setCurrentAlbum))
+    for (var i = 0; i < albumImage.length; i++) {
+        setCurrentAlbum(i);
+    }
