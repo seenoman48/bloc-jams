@@ -120,8 +120,6 @@ var currentlyPlayingSong = null;
 
     songRows[i].addEventListener('mouseleave', mouseLeaveHandler);
 
-  	songRows[i].addEventListener('click', clickHandler);git 
-
-
-
-
+  	songRows[i].addEventListener('click', clickHandler);
+  }
+}
